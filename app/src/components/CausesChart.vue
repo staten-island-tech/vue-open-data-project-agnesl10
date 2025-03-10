@@ -2,6 +2,8 @@
   <div></div>
 </template>
 
-<script setup></script>
+<script setup>
+import { Bar } from 'vue-chart.js'
+</script>
 
 <style scoped></style>
