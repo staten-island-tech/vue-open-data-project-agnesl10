@@ -1,8 +1,11 @@
 <template>
-  <div></div>
+  <div>
+    <h1 v-for="info in data" :key="info.leading_cause" :info="info">{{ info.leading_cause }}</h1>
+  </div>
 </template>
 
 <script setup>
+const deathArray = ref([])
 const api = `https://data.cityofnewyork.us/resource/jb7j-dtam.json`
 async function getCauses() {
   try {
@@ -20,6 +23,7 @@ async function getCauses() {
     alert('sorry, could not find the data')
   }
 }
+getCauses()
 </script>
 
 <style scoped></style>

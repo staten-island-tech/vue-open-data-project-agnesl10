@@ -1,9 +1,11 @@
+<template>
+  <div>
+    <CausesChart />
+  </div>
+</template>
+
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import CausesChart from '@/components/CausesChart.vue'
 </script>
 
-<template>
-  <main>
-    <TheWelcome />
-  </main>
-</template>
+<style scoped></style>

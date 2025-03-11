@@ -1,10 +1,12 @@
 <template>
-  <div></div>
+  <div>
+    <ApiData />
+  </div>
 </template>
 
 <script setup>
-import { Bar } from 'vue-chart.js'
-import apiData from '@/components/ApiData'
+import { Bar } from 'vue-chartjs'
+import ApiData from '@/components/ApiData.vue'
 import {
   Chart as ChartJS,
   Title,
