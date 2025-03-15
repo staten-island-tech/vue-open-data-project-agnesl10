@@ -1,10 +1,10 @@
 <template>
   <div>
-    <h1 v-for="info in data" :key="info.leading_cause" :info="info">{{ info.leading_cause }}</h1>
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue'
 const deathArray = ref([])
 const api = `https://data.cityofnewyork.us/resource/jb7j-dtam.json`
 async function getCauses() {

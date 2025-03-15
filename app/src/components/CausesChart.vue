@@ -1,13 +1,14 @@
 <template>
   <div>
-    <ApiData />
+    <ApiData>
+      <h1 v-for="info in data" :key="info.leading_cause" :info="info">{{ info.leading_cause }}</h1></ApiData>
   </div>
 </template>
 
 <script setup>
-import { Bar } from 'vue-chartjs'
+/* import { Bar } from 'vue-chartjs' */
 import ApiData from '@/components/ApiData.vue'
-import {
+/* import {
   Chart as ChartJS,
   Title,
   Tooltip,
@@ -17,7 +18,7 @@ import {
   LinearScale,
 } from 'chart.js'
 
-ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
+ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale) */
 </script>
 
 <style scoped></style>
