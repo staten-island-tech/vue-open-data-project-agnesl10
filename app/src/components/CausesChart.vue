@@ -1,7 +1,7 @@
 <template>
   <div>
-    <ApiData>
-      <h1 v-for="info in data" :key="info.leading_cause" :info="info">{{ info.leading_cause }}</h1></ApiData>
+    <ApiData v-for="info in data" :key="info.leading_cause" :info="info">
+      <h1>{{ info.leading_cause }}</h1></ApiData>
   </div>
 </template>
 
