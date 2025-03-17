@@ -1,11 +1,11 @@
 <template>
   <div>
-    <CausesChart />
+    <CardProps />
   </div>
 </template>
 
 <script setup>
-import CausesChart from '@/components/CausesChart.vue'
+import CardProps from '@/components/CardProps.vue'
 </script>
 
 <style scoped></style>
