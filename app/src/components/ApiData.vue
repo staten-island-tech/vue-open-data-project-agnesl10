@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CardProps v-for="info in deathArray" :key="info.leading_cause" :info="info"></CardProps>
+    <CardProps v-for="(info, index) in deathArray" :key="index" :info="info"></CardProps>
   </div>
 </template>
 
@@ -9,7 +9,7 @@ import { ref } from 'vue'
 import { onMounted } from 'vue'
 import CardProps from '@/components/CardProps.vue'
 const api = `https://data.cityofnewyork.us/resource/jb7j-dtam.json`
-let deathArray = ref([])
+const deathArray = ref('')
 
 async function getCauses() {
   try {
@@ -20,7 +20,7 @@ async function getCauses() {
       throw new Error(response)
     } else {
       const data = await response.json()
-      deathArray = data
+      deathArray.value = data
       console.log(deathArray)
     }
   } catch (error) {
