@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <CausesChart/>
+  <div class="flex flex-wrap justify-around flex-row">
+    <ApiData />
   </div>
 </template>
 
 <script setup>
-import CausesChart from '@/components/CausesChart.vue'
+import ApiData from '@/components/ApiData.vue'
 </script>
 
 <style scoped></style>

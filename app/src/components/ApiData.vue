@@ -1,14 +1,16 @@
 <template>
   <div>
-    <h1 v-for="info in data" :key="info.leading_cause" :info="info">
-      {{ info.leading_cause }}</h1>
+    <CardProps v-for="(info, index) in deathArray" :key="index" :info="info"></CardProps>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-const deathArray = ref([])
+import { onMounted } from 'vue'
+import CardProps from '@/components/CardProps.vue'
 const api = `https://data.cityofnewyork.us/resource/jb7j-dtam.json`
+const deathArray = ref('')
+
 async function getCauses() {
   try {
     //fetch returns a promise
@@ -18,14 +20,17 @@ async function getCauses() {
       throw new Error(response)
     } else {
       const data = await response.json()
-      console.log(data)
+      deathArray.value = data
+      console.log(deathArray)
     }
   } catch (error) {
     console.log(error)
     alert('sorry, could not find the data')
   }
 }
-getCauses()
+onMounted(() => {
+  getCauses()
+})
 </script>
 
 <style scoped></style>
