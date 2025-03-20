@@ -1,6 +1,11 @@
 <template>
   <div>
-    <CardProps class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-4" v-for="(info, index) in deathArray" :key="index" :info="info"></CardProps>
+    <CardProps
+      class="container flex flex-wrap justify-around flex-col items-center"
+      v-for="(info, index) in deathArray"
+      :key="index"
+      :info="info"
+    ></CardProps>
   </div>
 </template>
 
@@ -33,4 +38,11 @@ onMounted(() => {
 })
 </script>
 
-<style scoped></style>
+<style scoped>
+.container {
+  font-family: 'Cabin', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+</style>
