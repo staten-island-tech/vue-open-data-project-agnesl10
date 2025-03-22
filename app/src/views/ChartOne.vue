@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>view one</h1>
+    <h1>Top Causes Pie Chart</h1>
   </div>
 </template>
 
