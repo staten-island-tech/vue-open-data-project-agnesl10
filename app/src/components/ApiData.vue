@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="container flex flex-wrap gap-4 p-4 items-center text-center justify-center">
     <CardProps
-      class="container flex flex-wrap justify-around flex-row items-center"
+      class="container flex flex-wrap justify-around flex-row items-center text-center"
       v-for="(info, index) in deathArray"
       :key="index"
       :info="info"

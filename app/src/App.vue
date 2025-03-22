@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="route items-center">
+    <div class="route items-center text-center">
       <h1 class="header text-5xl text-center p-5">NYC Leading Causes of Death</h1>
-      <nav class="text-center">
+      <nav class="text-center items-center">
         <RouterLink
           class="bg-stone-300 text-black px-4 py-2 rounded-md transition duration-300 hover:bg-stone-400 items-center m-20"
           to="/"
