@@ -4,17 +4,17 @@
       <h1 class="header text-5xl text-center p-5">NYC Leading Causes of Death</h1>
       <nav class="text-center items-center">
         <RouterLink
-          class="bg-stone-300 text-black px-4 py-2 rounded-md transition duration-300 hover:bg-stone-400 items-center m-20"
+          class="bg-[#9ca3af] text-black px-4 py-2 rounded-md transition duration-300 hover:bg-[#4b5563] items-center m-20"
           to="/"
           >Home</RouterLink
         >
         <RouterLink
-          class="bg-stone-300 text-black px-4 py-2 rounded-md transition duration-300 hover:bg-stone-400 items-center m-20"
+          class="bg-[#9ca3af] text-black px-4 py-2 rounded-md transition duration-300 hover:bg-[#4b5563] items-center m-20"
           to="/chartone"
           >Top Causes Chart</RouterLink
         >
         <RouterLink
-          class="bg-stone-300 text-black px-4 py-2 rounded-md transition duration-300 hover:bg-stone-400 items-center m-20"
+          class="bg-[#9ca3af] text-black px-4 py-2 rounded-md transition duration-300 hover:bg-[#4b5563] items-center m-20"
           to="/charttwo"
           >Percent of Races Chart</RouterLink
         >

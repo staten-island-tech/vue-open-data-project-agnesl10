@@ -50,7 +50,7 @@ const fetchData = async () => {
       datasets: [{
         label: 'Number of Deaths',
         data: values,
-        backgroundColor: ['#44403c', '#57534e', '#6d6a65', '#78716c', '#8c8580'],
+        backgroundColor: ['#1f2937', '#374151', '#4b5563', '#6b7280', '#9ca3af'],
       }]
     };
   } catch (error) {
@@ -62,11 +62,11 @@ onMounted(fetchData);
 </script>
 
 <style scoped>
-div, 
-Bar{
+div *{
   font-family: 'Cabin', sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 </style>
+
