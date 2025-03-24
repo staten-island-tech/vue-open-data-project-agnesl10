@@ -8,53 +8,59 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import { Pie } from 'vue-chartjs'
-import { Chart as ChartJS, Title, Tooltip, Legend, ArcElement, CategoryScale } from 'chart.js'
+import { ref, onMounted } from 'vue';
+import { Pie } from 'vue-chartjs';
+import { Chart as ChartJS, Title, Tooltip, Legend, ArcElement, CategoryScale } from 'chart.js';
 
-ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale)
+ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale);
 
-const chartData = ref(null)
+const chartData = ref(null);
 const chartOptions = {
   responsive: true,
   plugins: {
     legend: {
-      position: 'top',
-    },
-  },
-}
+      position: 'top'
+    }
+  }
+};
 
 const fetchData = async () => {
   try {
-    const response = await fetch('https://data.cityofnewyork.us/resource/uvxr-2jwn.json')
-    const data = await response.json()
-
-    const causeCounts = {}
-    data.forEach((entry) => {
-      const cause = entry.leading_cause
+    const response = await fetch('https://data.cityofnewyork.us/resource/uvxr-2jwn.json');
+    const data = await response.json();
+    
+    const causeCounts = {};
+    data.forEach(entry => {
+      const cause = entry.leading_cause;
       if (cause) {
-        causeCounts[cause] = (causeCounts[cause] || 0) + parseInt(entry.deaths)
+        causeCounts[cause] = (causeCounts[cause] || 0) + parseInt(entry.deaths);
       }
-    })
-
-    const labels = Object.keys(causeCounts).slice(0, 5)
-    const values = Object.values(causeCounts).slice(0, 5)
-
+    });
+    
+    const labels = Object.keys(causeCounts).slice(0, 5);
+    const values = Object.values(causeCounts).slice(0, 5);
+    
     chartData.value = {
       labels,
-      datasets: [
-        {
-          data: values,
-          backgroundColor: ['#ff6384', '#36a2eb', '#ffce56', '#4bc0c0', '#9966ff'],
-        },
-      ],
-    }
+      datasets: [{
+        data: values,
+        backgroundColor: ['#44403c', '#57534e', '#6d6a65', '#78716c', '#8c8580'],
+      }]
+    };
   } catch (error) {
-    console.error('Error fetching data:', error)
+    console.error('Error fetching data:', error);
   }
-}
+};
 
-onMounted(fetchData)
+onMounted(fetchData);
 </script>
 
-<style scoped></style>
+<style scoped>
+div, 
+pie{
+  font-family: 'Cabin', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+</style>
