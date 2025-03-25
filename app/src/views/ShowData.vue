@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap justify-around flex-row">
+  <div class="flex flex-wrap justify-around flex-row bg-white">
     <ApiData />
   </div>
 </template>
